@@ -1,19 +1,19 @@
 <p align="left">
-  <a href="https://stacks.co">
-    <img alt="Stacks" src="https://i.imgur.com/zzwnCnY.png" width="250" />
+  <a href="https://base.co">
+    <img alt="Base" src="https://i.imgur.com/zzwnCnY.png" width="250" />
   </a>
 </p>
 
-# Stacks Blockchain
+# Base Blockchain
 
-Reference implementation of the [Stacks blockchain](https://github.com/stacks-network/stacks) in Rust.
+Reference implementation of the [Base blockchain](https://github.com/base-network/base) in Rust.
 
-Stacks is a layer-2 blockchain that uses Bitcoin as a base layer for security and enables decentralized apps and predictable smart contracts using the [Clarity language](https://clarity-lang.org/). Stacks implements [Proof of Transfer (PoX)](https://community.stacks.org/pox) mining that anchors to Bitcoin security. Leader election happens at the Bitcoin blockchain and Stacks (STX) miners write new blocks on the separate Stacks blockchain. With PoX there is no need to modify Bitcoin to enable smart contracts and decentralized apps.
+Base is a layer-2 blockchain that uses Bitcoin as a base layer for security and enables decentralized apps and predictable smart contracts using the [Clarity language](https://clarity-lang.org/). Base implements [Proof of Transfer (PoX)](https://community.base.org/pox) mining that anchors to Bitcoin security. Leader election happens at the Bitcoin blockchain and Base (STX) miners write new blocks on the separate Base blockchain. With PoX there is no need to modify Bitcoin to enable smart contracts and decentralized apps.
 
 [![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg?style=flat)](https://www.gnu.org/licenses/gpl-3.0)
-[![Release](https://img.shields.io/github/v/release/stacks-network/stacks-blockchain?style=flat)](https://github.com/stacks-network/stacks-blockchain/releases/latest)
-[![Build Status](https://github.com/stacks-network/stacks-blockchain/actions/workflows/ci.yml/badge.svg?branch=master&event=workflow_dispatch&style=flat)](https://github.com/stacks-network/stacks-blockchain/actions/workflows/ci.yml?query=event%3Aworkflow_dispatch+branch%3Amaster)
-[![Discord Chat](https://img.shields.io/discord/621759717756370964.svg)](https://stacks.chat)
+[![Release](https://img.shields.io/github/v/release/base-network/base-blockchain?style=flat)](https://github.com/base-network/base-blockchain/releases/latest)
+[![Build Status](https://github.com/base-network/base-blockchain/actions/workflows/ci.yml/badge.svg?branch=master&event=workflow_dispatch&style=flat)](https://github.com/base-network/base-blockchain/actions/workflows/ci.yml?query=event%3Aworkflow_dispatch+branch%3Amaster)
+[![Discord Chat](https://img.shields.io/discord/621759717756370964.svg)](https://base.chat)
 
 ## Building
 
@@ -27,7 +27,7 @@ $ source $HOME/.cargo/env
 $ rustup component add rustfmt
 ```
 
-- When building the [`master`](https://github.com/stacks-network/stacks-blockchain/tree/master) branch, ensure you are using the latest stable release:
+- When building the [`master`](https://github.com/base-network/base-blockchain/tree/master) branch, ensure you are using the latest stable release:
 
 ```bash
 $ rustup update
@@ -36,8 +36,8 @@ $ rustup update
 ### 2. Clone the source repository:
 
 ```bash
-$ git clone --depth=1 https://github.com/stacks-network/stacks-blockchain.git
-$ cd stacks-blockchain
+$ git clone --depth=1 https://github.com/base-network/base-blockchain.git
+$ cd base-blockchain
 ```
 
 ### 3. Build the project
@@ -66,24 +66,24 @@ $ cargo nextest run
 You can observe the state machine in action locally by running:
 
 ```bash
-$ cd testnet/stacks-node
-$ cargo run --bin stacks-node -- start --config=./conf/testnet-follower-conf.toml
+$ cd testnet/base-node
+$ cargo run --bin base-node -- start --config=./conf/testnet-follower-conf.toml
 ```
 
 _On Windows, many tests will fail if the line endings aren't `LF`. Please ensure that you are have git's `core.autocrlf` set to `input` when you clone the repository to avoid any potential issues. This is due to the Clarity language currently being sensitive to line endings._
 
-Additional testnet documentation is available [here](./docs/testnet.md) and [here](https://docs.stacks.co/docs/nodes-and-miners/miner-testnet)
+Additional testnet documentation is available [here](./docs/testnet.md) and [here](https://docs.base.co/docs/nodes-and-miners/miner-testnet)
 
 ## Release Process
 
-The release process for the stacks blockchain is [defined here](./docs/release-process.md)
+The release process for the base blockchain is [defined here](./docs/release-process.md)
 
 ## Further Reading
 
-You can learn more by visiting [the Stacks Website](https://stacks.co) and checking out the documentation:
+You can learn more by visiting [the Base Website](https://base.co) and checking out the documentation:
 
-- [Stacks docs](https://docs.stacks.co/)
-- [Stacks Improvement Proposals (SIPs)](./docs/SIPS.md)
+- [Base docs](https://docs.base.co/)
+- [Base Improvement Proposals (SIPs)](./docs/SIPS.md)
 - [Mining](./docs/mining.md)
 - [Profiling](./docs/profiling.md)
 - [RPC endpoints](./docs/rpc-endpoints.md)
@@ -91,11 +91,11 @@ You can learn more by visiting [the Stacks Website](https://stacks.co) and check
 
 You can also read the technical papers:
 
-- ["PoX: Proof of Transfer Mining with Bitcoin"](https://community.stacks.org/pox), May 2020
-- ["Stacks 2.0: Apps and Smart Contracts for Bitcoin"](https://stacks.org/stacks), Dec 2020
+- ["PoX: Proof of Transfer Mining with Bitcoin"](https://community.base.org/pox), May 2020
+- ["Base 2.0: Apps and Smart Contracts for Bitcoin"](https://base.org/base), Dec 2020
 
 ## Copyright and License
 
-The code and documentation copyright are attributed to stacks.org.
+The code and documentation copyright are attributed to base.org.
 
 This code is released under the [GPL v3 license](https://www.gnu.org/licenses/quick-guide-gplv3.en.html), and the docs are released under the [Creative Commons license](https://creativecommons.org/).
