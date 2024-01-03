@@ -1,9 +1,3 @@
-<p align="left">
-  <a href="https://base.co">
-    <img alt="Base" src="https://i.imgur.com/zzwnCnY.png" width="250" />
-  </a>
-</p>
-
 # Base Blockchain
 
 Reference implementation of the [Base blockchain](https://github.com/base-network/base) in Rust.
