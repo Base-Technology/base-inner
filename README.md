@@ -2,7 +2,7 @@
 
 Reference implementation of the Base blockchain in Rust.
 
-Base is a layer-2 blockchain that uses Bitcoin as a base layer for security and enables decentralized apps and predictable smart contracts using the [BigBang language] . Base implements [Proof of Transfer (POT)]  mining that anchors to Bitcoin security. Leader election happens at the Bitcoin blockchain and Base (STX) miners write new blocks on the separate Base blockchain. With PoX there is no need to modify Bitcoin to enable smart contracts and decentralized apps.
+Base is a layer-2 blockchain that uses Bitcoin as a base layer for security and enables decentralized apps and predictable smart contracts using the [BigBang language] . Base implements [Proof of Transfer (POT)]  mining that anchors to Bitcoin security. Leader election happens at the Bitcoin blockchain and Base (BASE) miners write new blocks on the separate Base blockchain. With PoX there is no need to modify Bitcoin to enable smart contracts and decentralized apps.
 
 
 ## Building
@@ -59,7 +59,7 @@ $ cd testnet/base-node
 $ cargo run --bin base-node -- start --config=./conf/testnet-follower-conf.toml
 ```
 
-_On Windows, many tests will fail if the line endings aren't `LF`. Please ensure that you are have git's `core.autocrlf` set to `input` when you clone the repository to avoid any potential issues. This is due to the Clarity language currently being sensitive to line endings._
+_On Windows, many tests will fail if the line endings aren't `LF`. Please ensure that you are have git's `core.autocrlf` set to `input` when you clone the repository to avoid any potential issues. This is due to the BigBang language currently being sensitive to line endings._
 
 
 ## Release Process
